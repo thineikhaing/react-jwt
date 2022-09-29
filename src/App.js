@@ -25,8 +25,10 @@ const App = () => {
 
     if (user) {
       setCurrentUser(user);
-      setShowModeratorBoard(user.roles.includes("ROLE_MODERATOR"));
-      setShowAdminBoard(user.roles.includes("ROLE_ADMIN"));
+      setShowModeratorBoard(false);
+      setShowAdminBoard(false);
+      // setShowModeratorBoard(user.roles.includes("ROLE_MODERATOR"));
+      // setShowAdminBoard(user.roles.includes("ROLE_ADMIN"));
     }
 
     EventBus.on("logout", () => {
@@ -49,7 +51,7 @@ const App = () => {
     <div>
       <nav className="navbar navbar-expand navbar-dark bg-dark">
         <Link to={"/"} className="navbar-brand">
-          bezKoder
+          Fair Form
         </Link>
         <div className="navbar-nav mr-auto">
           <li className="nav-item">

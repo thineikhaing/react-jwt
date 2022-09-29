@@ -16,16 +16,16 @@ const Profile = () => {
         {currentUser.accessToken.substr(currentUser.accessToken.length - 20)}
       </p>
       <p>
-        <strong>Id:</strong> {currentUser.id}
+        <strong>Token expiry time:</strong> {currentUser.exp}
       </p>
       <p>
         <strong>Email:</strong> {currentUser.email}
       </p>
-      <strong>Authorities:</strong>
+      {/* <strong>Authorities:</strong>
       <ul>
         {currentUser.roles &&
           currentUser.roles.map((role, index) => <li key={index}>{role}</li>)}
-      </ul>
+      </ul> */}
     </div>
   );
 };
