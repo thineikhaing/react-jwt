@@ -47,9 +47,12 @@ const Login = () => {
 
     if (checkBtn.current.context._errors.length === 0) {
       AuthService.login(username, password).then(
-        () => {
+        (res) => {
+          console.log("response: ")
+          console.log(res)
           navigate("/profile");
           window.location.reload();
+   
         },
         (error) => {
           const resMessage =

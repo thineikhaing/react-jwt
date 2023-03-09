@@ -9,7 +9,7 @@ const Home = () => {
     UserService.getPublicContent().then(
       (response) => {
         console.log(response.data)
-        setContent(response.data.status);
+        setContent(response.data);
       },
       (error) => {
         const _content =

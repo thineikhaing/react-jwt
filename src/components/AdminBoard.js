@@ -3,13 +3,13 @@ import React, { useState, useEffect } from "react";
 import UserService from "../services/user.service";
 import EventBus from "../common/EventBus";
 
-const BoardAdmin = () => {
+const AdminBoard = () => {
   const [content, setContent] = useState("");
 
   useEffect(() => {
     UserService.getAdminBoard().then(
       (response) => {
-        setContent(response.data.status);
+        setContent(response.data);
       },
       (error) => {
         const _content =
@@ -37,4 +37,4 @@ const BoardAdmin = () => {
   );
 };
 
-export default BoardAdmin;
+export default AdminBoard;
